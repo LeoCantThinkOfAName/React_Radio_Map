@@ -1,0 +1,60 @@
+.country-selector {
+  top: 20px;
+  left: 20px;
+  position: fixed;
+  z-index: 100;
+
+  input {
+    border: 1px solid #888;
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 40px;
+    width: 200px;
+    padding: 0 10px;
+  }
+}
+
+.country-list {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  overflow: auto;
+  max-height: calc(100vh - 100px);
+
+  li {
+    cursor: pointer;
+    list-style: none;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+}
+
+@keyframes indicating {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.indicator {
+  animation-name: indicating;
+  animation-iteration-count: infinite;
+  animation-duration: 0.8s;
+  height: 20px;
+  width: 1px;
+  background: #888;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
